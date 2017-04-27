@@ -201,7 +201,7 @@ $(function() {
                         return false;
                     }
                     LODOP.PRINT_INIT("");
-                    LODOP.SET_PRINT_PAGESIZE(2,0,0,"A4"); // 横向打印
+                    LODOP.SET_PRINT_PAGESIZE(2,0,0,"A4"); // 0 操作者自行决定或打印机缺省设置 1 纵向打印，固定纸张；2 横向打印，固定纸张
                     // LODOP.SET_PREVIEW_WINDOW(1,0,0,1000,600,""); // 初始预览窗口大小
                     LODOP.SET_SHOW_MODE("LANDSCAPE_DEFROTATED",1); // 横向打印时正向显示
                     LODOP.SET_SHOW_MODE("HIDE_PAPER_BOARD",1); // 去除背景滚动线
@@ -210,7 +210,7 @@ $(function() {
 
                     // 追加打印头部
                     LODOP.ADD_PRINT_TABLE(5,5,"100%",180,strBodyStyle + $('#print-header').html());
-                    LODOP.SET_PRINT_STYLEA(0,"ItemType",1);
+                    LODOP.SET_PRINT_STYLEA(0,"ItemType",1); // 页眉页脚项
 
                     // 追加打印主体：分页、循环表格
                     LODOP.ADD_PRINT_TABLE(185,5,"100%",370, strBodyStyle + $('#print-body').html());
@@ -218,7 +218,7 @@ $(function() {
 
                     // 追加打印底部
                     LODOP.ADD_PRINT_TABLE(570,5,"100%",150,strBodyStyle + $('#print-footer').html());
-                    LODOP.SET_PRINT_STYLEA(0,"ItemType",1);
+                    LODOP.SET_PRINT_STYLEA(0,"ItemType",1); // 页眉页脚项
                     LODOP.SET_PRINT_STYLEA(0,"LinkedItem",2);
 
                     LODOP.NewPageA();
