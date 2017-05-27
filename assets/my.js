@@ -71,7 +71,8 @@ function toFormatMoney(mVal, iAccuracy){
     do{
         aBuf.unshift(funZero(iInt % 1000, 3));
     }while((iInt = parseInt(iInt/1000)));
-    aBuf[0] = parseInt(aBuf[0]).toString();//最高段区去掉前导0
+    // aBuf[0] = parseInt(aBuf[0]).toString();//最高段区去掉前导0
+    aBuf[0] = aBuf[0].replace(/^0{1,}/, ''); // 修复 IE8 下 parseInt('012') 兼容问题
     var iFraFinal = '';
     if (0 === iFra) {
         iFraFinal = new Array(iAccuracy + 1).join('0');
