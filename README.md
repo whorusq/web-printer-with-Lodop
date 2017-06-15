@@ -11,43 +11,43 @@
 
 + demo 结构
 
-> 其中使用 layui 处理弹窗；data.json 是模拟数据
+  > 其中使用 layui 处理弹窗；data.json 是模拟数据
 
-```
-.
-├── assets
-│   ├── images
-│   │   ├── layer-btn-cancel-hover.png
-│   │   ├── layer-btn-cancel.png
-│   │   ├── layer-btn-ok-hover.png
-│   │   ├── layer-btn-ok.png
-│   │   ├── layui-layer-title-close-hover.png
-│   │   ├── layui-layer-title-close.png
-│   │   └── layui-layer-title-info.png
-│   ├── jquery.min.js
-│   ├── jquery.tmpl.js
-│   ├── layer
-│   │   ├── extend
-│   │   │   └── layer.ext.js
-│   │   ├── layer.js
-│   │   └── skin
-│   │       ├── default
-│   │       │   ├── icon-ext.png
-│   │       │   ├── icon.png
-│   │       │   ├── loading-0.gif
-│   │       │   ├── loading-1.gif
-│   │       │   └── loading-2.gif
-│   │       ├── layer.css
-│   │       └── layer.ext.css
-│   ├── lodop
-│   │   ├── CLodop_Setup_for_Win32NT.exe
-│   │   ├── LodopFuncs.js
-│   │   ├── install_lodop32.exe
-│   │   └── install_lodop64.exe
-│   └── my.js
-├── data.json
-└── index.html
-```
+  ```
+  .
+  ├── assets
+  │   ├── images
+  │   │   ├── layer-btn-cancel-hover.png
+  │   │   ├── layer-btn-cancel.png
+  │   │   ├── layer-btn-ok-hover.png
+  │   │   ├── layer-btn-ok.png
+  │   │   ├── layui-layer-title-close-hover.png
+  │   │   ├── layui-layer-title-close.png
+  │   │   └── layui-layer-title-info.png
+  │   ├── jquery.min.js
+  │   ├── jquery.tmpl.js
+  │   ├── layer
+  │   │   ├── extend
+  │   │   │   └── layer.ext.js
+  │   │   ├── layer.js
+  │   │   └── skin
+  │   │       ├── default
+  │   │       │   ├── icon-ext.png
+  │   │       │   ├── icon.png
+  │   │       │   ├── loading-0.gif
+  │   │       │   ├── loading-1.gif
+  │   │       │   └── loading-2.gif
+  │   │       ├── layer.css
+  │   │       └── layer.ext.css
+  │   ├── lodop
+  │   │   ├── CLodop_Setup_for_Win32NT.exe
+  │   │   ├── LodopFuncs.js
+  │   │   ├── install_lodop32.exe
+  │   │   └── install_lodop64.exe
+  │   └── my.js
+  ├── data.json
+  └── index.html
+  ```
 
 
 + 预览效果如下
