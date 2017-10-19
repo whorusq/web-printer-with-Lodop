@@ -1,6 +1,13 @@
 基于 Lodop 的 web 打印示例
 ---
 
+Lodop & c-lodop 是一款专业共享软件，公开版本未限制功能，多数用户可免费长期使用。
+
+仅如下情况需要注册收费：
+
+- 你希望用到（不经过弹出预览窗口的）“直接打印”功能时。不注册时，该功能直接打印的纸张左下角会有“本页由XXX试用版输出”小字样水印。
+- 另外导出Excel文件或图片也需要注册。
+
 ### 相关资源
 
 + 官网下载中心（程序+文档）：[http://www.lodop.net/download.html](http://www.lodop.net/download.html)
@@ -11,7 +18,7 @@
 
 + demo 结构
 
-  > 其中使用 layui 处理弹窗；data.json 是模拟数据
+  > 其中使用 layui 处理消息提示弹窗；data.json 是模拟数据；jquery.tmpl.js 是一个简单的模块数据渲染插件
 
   ```
   .
