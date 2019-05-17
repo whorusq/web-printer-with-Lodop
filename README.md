@@ -1,7 +1,15 @@
 基于 Lodop 的 web 打印示例
 ---
 
-[TOC]
+1. [概述](#1-概述)
+2. [相关资源](#2-相关资源)
+3. [一个发运单打印的 Demo](#3-一个发运单打印的-demo)
+4. [关于连打](#4-关于连打)
+	- 4.1. [连打关键点](##41-连打关键点)
+	- 4.2. [具体实现方法](#42-具体实现方法)
+5. [附录](#5-附录)
+	- 5.1. [相关常见问题](#51-相关常见问题)
+	- 5.2. [纸型说明](#52-纸型说明)
 
 ---
 
@@ -22,54 +30,54 @@ Lodop & C-Lodop 是一款专业共享软件，公开版本未限制功能，多�
 
 ### 3. 一个发运单打印的 Demo
 
-- 该 demo 目录结构
+示例的目录结构说明
 
-    ```text
-    .
-    ├── assets
-    │   ├── images
-    │   │   ├── layer-btn-cancel-hover.png
-    │   │   ├── layer-btn-cancel.png
-    │   │   ├── layer-btn-ok-hover.png
-    │   │   ├── layer-btn-ok.png
-    │   │   ├── layui-layer-title-close-hover.png
-    │   │   ├── layui-layer-title-close.png
-    │   │   └── layui-layer-title-info.png
-    │   ├── jquery.min.js
-    │   ├── jquery.tmpl.js     <----- 一个简单的模块数据渲染插件
-    │   ├── layer     <----- 本示例使用 layer 处理消息弹窗
-    │   │   ├── extend
-    │   │   │   └── layer.ext.js
-    │   │   ├── layer.js
-    │   │   └── skin
-    │   │       ├── default
-    │   │       │   ├── icon-ext.png
-    │   │       │   ├── icon.png
-    │   │       │   ├── loading-0.gif
-    │   │       │   ├── loading-1.gif
-    │   │       │   └── loading-2.gif
-    │   │       ├── layer.css
-    │   │       └── layer.ext.css
-    │   ├── lodop     <----- 打印插件相关文件
-    │   │   ├── CLodop_Setup_for_Win32NT.exe
-    │   │   ├── LodopFuncs.js
-    │   │   ├── install_lodop32.exe
-    │   │   └── install_lodop64.exe
-    │   └── my.js     <----- 一些用到的公共函数：转换金额、时间，调用弹窗
-    ├── data.json     <----- 模拟数据
-    └── index.html     <----- 示例页：打印控件的调用及打印样式设置等
-    ```
+```text
+.
+├── assets
+│   ├── images
+│   │   ├── layer-btn-cancel-hover.png
+│   │   ├── layer-btn-cancel.png
+│   │   ├── layer-btn-ok-hover.png
+│   │   ├── layer-btn-ok.png
+│   │   ├── layui-layer-title-close-hover.png
+│   │   ├── layui-layer-title-close.png
+│   │   └── layui-layer-title-info.png
+│   ├── jquery.min.js
+│   ├── jquery.tmpl.js     <----- 一个简单的模块数据渲染插件
+│   ├── layer     <----- 本示例使用 layer 处理消息弹窗
+│   │   ├── extend
+│   │   │   └── layer.ext.js
+│   │   ├── layer.js
+│   │   └── skin
+│   │       ├── default
+│   │       │   ├── icon-ext.png
+│   │       │   ├── icon.png
+│   │       │   ├── loading-0.gif
+│   │       │   ├── loading-1.gif
+│   │       │   └── loading-2.gif
+│   │       ├── layer.css
+│   │       └── layer.ext.css
+│   ├── lodop     <----- 打印插件相关文件
+│   │   ├── CLodop_Setup_for_Win32NT.exe
+│   │   ├── LodopFuncs.js
+│   │   ├── install_lodop32.exe
+│   │   └── install_lodop64.exe
+│   └── my.js     <----- 一些用到的公共函数：转换金额、时间，调用弹窗
+├── data.json     <----- 模拟数据
+└── index.html     <----- 示例页：打印控件的调用及打印样式设置等
+```
 
-- 预览效果如下
+点击打印后，打印预览效果如下
 
-    ![预览图片）](./screenhot.png)
+![预览图片）](./screenhot.png)
 
 
 ### 4. 关于连打
 
 #### 4.1. 连打关键点
 
-> 连打时主要是通过「针式打印机」，使用三联n等分的打印纸进行批量打印。关于纸型的说明，详见附录：[5.2. 纸型说明](52-纸型说明)
+> 连打时主要是通过「针式打印机」，使用三联n等分的打印纸进行批量打印。关于纸型的说明，详见附录：[5.2. 纸型说明](#52-纸型说明)
 
 1. 通过**进纸调节器按钮**，调整打印机的默认纸型。如果你的打印机没有这个类似的按钮，可询问客服具体调节方法。
 
